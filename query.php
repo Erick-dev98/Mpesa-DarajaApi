@@ -11,7 +11,7 @@ $passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
 $Password = base64_encode($BusinessShortCode . $passkey . $Timestamp);
 
 //THIS IS THE UNIQUE ID THAT WAS GENERATED WHEN STK REQUEST INITIATED SUCCESSFULLY
-$CheckoutRequestID = 'ws_CO_06062024091758286768003470';
+$CheckoutRequestID = 'ws_CO_06062024163906923768003470';
 $queryheader = ['Content-Type:application/json', 'Authorization:Bearer ' . $access_token];
 
 # initiating the transaction
@@ -36,11 +36,11 @@ if (isset($data_to->ResultCode)) {
   if ($ResultCode == '1037') {
     $massage = "1037 Timeout in completing transaction";
   } elseif ($ResultCode == '1032') {
-    $massage = "1032 Transaction  has cancelled by user";
+    $massage = "1032 Transaction  has been cancelled by user";
   } elseif ($ResultCode == '1') {
     $massage = "1 The balance is insufficient for the transaction";
   } elseif ($ResultCode == '0') {
-    $massage = "0 The transaction is successfully";
+    $massage = "0 The transaction is successful";
   }
 }
 
