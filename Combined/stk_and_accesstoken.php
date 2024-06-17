@@ -11,9 +11,9 @@ $BusinessShortCode = '174379';
 $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
 
 $PartyA = $phone; // This is your phone number, 
-$PartyB = '254708374149'; //This os the same as business short code
+$PartyB = '254708374149'; //This is the same as business short code
 $AccountReference = 'EverosaCollections';
-$TransactionDesc = 'Please cornfirm payment made to EverosaCollections.';
+$TransactionDesc = 'Please cornfirm payment made to EverosaCollections.'; // Your business/organization name 
 $Amount = $money;
 
 # Get the timestamp, format YYYYmmddhms -> 20181004151020
