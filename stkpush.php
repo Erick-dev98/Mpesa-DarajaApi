@@ -3,14 +3,14 @@
 include 'accessToken.php';
 date_default_timezone_set('Africa/Nairobi');
 $processrequestUrl = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-$callbackurl = 'https://bb55-197-237-132-56.ngrok-free.app/darajaapi/callback.php';
+$callbackurl = 'https://everosacollections.com/darajaapp/callback.php';
 $passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
 $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
 
 // ENCRIPT  DATA TO GET PASSWORD
 $Password = base64_encode($BusinessShortCode . $passkey . $Timestamp);
-$phone = '254748795077';//phone number to receive the stk push
+$phone = '254768003470';//phone number to receive the stk push
 $money = '1';
 $PartyA = $phone; 
 $PartyB = '254708374149';
@@ -31,7 +31,7 @@ $curl_post_data = array(
   'TransactionType' => 'CustomerPayBillOnline',
   'Amount' => $Amount,
   'PartyA' => $PartyA,
-  'PartyB' => $BusinessShortCode,
+  'PartyB' => $PartyB,
   'PhoneNumber' => $PartyA,
   'CallBackURL' => $callbackurl,
   'AccountReference' => $AccountReference,
